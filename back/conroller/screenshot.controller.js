@@ -8,7 +8,7 @@ class screenshotController {
         let {imageBase64} = req.body
 
         let data = {
-            "folderId": "b1gn6rtr8od4tfdkbesn",
+            "folderId": "someFolderId",
             "analyze_specs": [{
                 "content": `${imageBase64}`,
                 "features": [{
@@ -23,7 +23,7 @@ class screenshotController {
         axios.post('https://vision.api.cloud.yandex.net/vision/v1/batchAnalyze', data, {
                 headers:{
                     "Content-Type": "application/json",
-                    "Authorization": `Api-Key AQVNwDqfRJYN6RgOvMwzTmz9_PjMtgc--mShEzd7`,
+                    "Authorization": `Api-Key SomeApi-Key`,
                     "Accept": "application/json"
                 }})
             .then(r=> {
